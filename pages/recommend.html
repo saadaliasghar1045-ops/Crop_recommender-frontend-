@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Recommender</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container navbar">
+
+            <!-- Logo / Brand -->
+            <a href="#" class="brand">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 21V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+
+                        <path d="M12 13C8 13 5 10.5 5 6C9.5 6 12 8.5 12 13Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+
+                        <path d="M12 17C12 13 15 10.5 19 10.5C19 15 16.5 17.5 12 17.5Z" stroke="currentColor"
+                            stroke-width="1.8" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="brand-text">
+                    <span class="brand-name">Crop Recommender</span>
+                    <span class="brand-tagline">Smarter farming decisions</span>
+                </div>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+
+
+            <!-- Header Action -->
+            <a href="recommend.html" class="header-button">
+                Get Recommendation
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-button" type="button" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================================
+         RECOMMENDER
+    ================================= -->
+
+    <main class="recommender-page">
+
+        <!-- Background decoration -->
+        <div class="agro-grid"></div>
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+
+        <div class="recommender-container">
+
+            <!-- Intro -->
+
+            <div class="recommender-intro">
+
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    AI RECOMMENDATION SYSTEM
+                </span>
+
+                <h1>
+                    Find the right crop
+                    <span>for your land.</span>
+                </h1>
+
+                <p>
+                    Enter your soil and environmental conditions.
+                    Our machine learning model will analyze the
+                    data and recommend a suitable crop.
+                </p>
+
+            </div>
+
+
+            <!-- Form Card -->
+
+            <div class="recommender-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="card-label">
+                            FIELD ANALYSIS
+                        </span>
+
+                        <h2>
+                            Enter field conditions
+                        </h2>
+                    </div>
+
+                    <div class="analysis-icon">
+                        🌱
+                    </div>
+
+                </div>
+
+
+                <form id="recommendation-form">
+
+                    <!-- =====================
+                         SOIL CONDITIONS
+                    ====================== -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="section-line"></span>
+
+                            <h3>Soil Conditions</h3>
+
+                            <span class="section-line"></span>
+                        </div>
+
+
+                        <div class="input-grid">
+
+                            <!-- Nitrogen -->
+
+                            <div class="input-group">
+
+                                <label for="nitrogen">
+                                    Nitrogen
+                                    <span>N</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="nitrogen" name="N" placeholder="e.g. 90" step="any"
+                                        required>
+
+                                    <span class="input-unit">
+                                        mg/kg
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Phosphorus -->
+
+                            <div class="input-group">
+
+                                <label for="phosphorus">
+                                    Phosphorus
+                                    <span>P</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="phosphorus" name="P" placeholder="e.g. 42" step="any"
+                                        required>
+
+                                    <span class="input-unit">
+                                        mg/kg
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Potassium -->
+
+                            <div class="input-group">
+
+                                <label for="potassium">
+                                    Potassium
+                                    <span>K</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="potassium" name="K" placeholder="e.g. 43" step="any"
+                                        required>
+
+                                    <span class="input-unit">
+                                        mg/kg
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- pH -->
+
+                            <div class="input-group">
+
+                                <label for="ph">
+                                    Soil pH
+                                    <span>pH</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="ph" name="ph" placeholder="e.g. 6.5" step="any" required>
+
+                                    <span class="input-unit">
+                                        pH
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================
+                         ENVIRONMENT
+                    ====================== -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+                            <span class="section-line"></span>
+
+                            <h3>Environmental Conditions</h3>
+
+                            <span class="section-line"></span>
+                        </div>
+
+
+                        <div class="input-grid">
+
+                            <!-- Temperature -->
+
+                            <div class="input-group">
+
+                                <label for="temperature">
+                                    Temperature
+                                    <span>°C</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="temperature" name="temperature" placeholder="e.g. 25"
+                                        step="any" required>
+
+                                    <span class="input-unit">
+                                        °C
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Humidity -->
+
+                            <div class="input-group">
+
+                                <label for="humidity">
+                                    Humidity
+                                    <span>%</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="humidity" name="humidity" placeholder="e.g. 80" step="any"
+                                        required>
+
+                                    <span class="input-unit">
+                                        %
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Rainfall -->
+
+                            <div class="input-group">
+
+                                <label for="rainfall">
+                                    Rainfall
+                                    <span>mm</span>
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <input type="number" id="rainfall" name="rainfall" placeholder="e.g. 200" step="any"
+                                        required>
+
+                                    <span class="input-unit">
+                                        mm
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit -->
+
+                    <div class="form-submit">
+
+                        <button type="submit" class="analyze-button">
+
+                            <span class="button-icon">✦</span>
+
+                            Analyze Field
+
+                            <span class="button-arrow">→</span>
+
+                        </button>
+
+                        <p>
+                            7 conditions · Random Forest model
+                        </p>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- Result -->
+
+            <div class="recommendation-result" id="recommendation-result">
+
+                <span class="result-label">
+                    MODEL RECOMMENDATION
+                </span>
+
+                <h2 id="recommended-crop">
+                    —
+                </h2>
+
+                <p>
+                    Your field conditions have been analyzed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <div class="footer-brand-title">
+                        <div class="footer-logo">
+                            🌱
+                        </div>
+
+                        <div>
+                            <h3>Crop Recommender</h3>
+                            <span>Smarter farming decisions</span>
+                        </div>
+                    </div>
+
+                    <p>
+                        An AI-powered crop recommendation system
+                        that helps farmers make smarter decisions
+                        using soil and environmental conditions.
+                    </p>
+
+                </div>
+
+
+                <!-- Explore -->
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#about">About</a>
+                    <a href="pages/recommend.html">Get Recommendation</a>
+
+                </div>
+
+
+                <!-- Connect -->
+                <div class="footer-column">
+
+                    <h4>Connect</h4>
+
+                    <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:YOUR_EMAIL@example.com">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Crop Recommender
+                </span>
+
+                <span>
+                    Built with Machine Learning
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/app.js"></script>
+
+</body>
+
+</html>

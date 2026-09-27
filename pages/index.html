@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+
+    <header class="site-header">
+        <div class="container navbar">
+
+            <!-- Logo / Brand -->
+            <a href="#" class="brand">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 21V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+
+                        <path d="M12 13C8 13 5 10.5 5 6C9.5 6 12 8.5 12 13Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+
+                        <path d="M12 17C12 13 15 10.5 19 10.5C19 15 16.5 17.5 12 17.5Z" stroke="currentColor"
+                            stroke-width="1.8" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="brand-text">
+                    <span class="brand-name">Crop Recommender</span>
+                    <span class="brand-tagline">Smarter farming decisions</span>
+                </div>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </nav>
+
+
+            <!-- Header Action -->
+            <a href="recommend.html" class="header-button">
+                Get Recommendation
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-button" type="button" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="container hero-container">
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    🌱 AI-powered crop recommendation
+                </span>
+
+                <h1 class="hero-title">
+                    Grow smarter.
+                    <span>Choose the right crop.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Make better farming decisions using soil and environmental
+                    conditions. Our machine learning model analyzes your land
+                    and recommends a suitable crop for you.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#recommend" class="hero-primary-button">
+                        Get Crop Recommendation
+                        <span>→</span>
+                    </a>
+
+                    <a href="#how-it-works" class="hero-secondary-button">
+                        How it works
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+                    <span class="hero-note-icon">✓</span>
+                    Based on 7 soil and environmental conditions
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+
+                <div class="hero-image-card">
+
+                    <div class="hero-image-placeholder">
+
+                        <div class="sun"></div>
+
+                        <div class="field field-back"></div>
+                        <div class="field field-middle"></div>
+                        <div class="field field-front"></div>
+
+                        <div class="plant plant-one">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="plant plant-two">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="plant plant-three">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Recommendation Card -->
+                    <div class="recommendation-card">
+
+                        <div class="recommendation-icon">
+                            🌾
+                        </div>
+
+                        <div class="recommendation-info">
+                            <span class="recommendation-label">
+                                Recommended crop
+                            </span>
+
+                            <strong class="recommendation-crop">
+                                Rice
+                            </strong>
+                        </div>
+
+                        <div class="recommendation-check">
+                            ✓
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Floating Information Card -->
+                <div class="condition-card">
+
+                    <div class="condition-icon">
+                        <span>⌁</span>
+                    </div>
+
+                    <div>
+                        <strong>7 conditions</strong>
+                        <span>analyzed by the model</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+
+            <div class="section-heading">
+                <span class="section-label">HOW IT WORKS</span>
+
+                <h2>
+                    From soil data to a smarter
+                    <span>crop decision.</span>
+                </h2>
+
+                <p>
+                    Our machine learning model analyzes your soil and environmental
+                    conditions to recommend a suitable crop.
+                </p>
+            </div>
+
+            <div class="steps-container">
+
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">01</div>
+
+                    <div class="step-icon">
+                        <!-- Sliders icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="6" x2="20" y2="6"></line>
+                            <line x1="4" y1="12" x2="20" y2="12"></line>
+                            <line x1="4" y1="18" x2="20" y2="18"></line>
+
+                            <circle cx="9" cy="6" r="2"></circle>
+                            <circle cx="15" cy="12" r="2"></circle>
+                            <circle cx="10" cy="18" r="2"></circle>
+                        </svg>
+                    </div>
+
+                    <h3>Enter Your Conditions</h3>
+
+                    <p>
+                        Provide information about your soil and environmental
+                        conditions such as nitrogen, temperature, humidity, and rainfall.
+                    </p>
+                </div>
+
+
+                <!-- Connector -->
+                <div class="step-connector">
+                    <span></span>
+                </div>
+
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">02</div>
+
+                    <div class="step-icon">
+                        <!-- Brain / AI icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M9 4.5a3 3 0 0 0-5 2.2A3.5 3.5 0 0 0 5.5 13
+                                 A3 3 0 0 0 9 18.5V4.5Z"></path>
+
+                            <path d="M15 4.5a3 3 0 0 1 5 2.2A3.5 3.5 0 0 1 18.5 13
+                                 A3 3 0 0 1 15 18.5V4.5Z"></path>
+
+                            <path d="M9 8h6"></path>
+                            <path d="M9 12h6"></path>
+                            <path d="M9 16h6"></path>
+                        </svg>
+                    </div>
+
+                    <h3>AI Analyzes the Data</h3>
+
+                    <p>
+                        Your data is sent to our machine learning model, which
+                        analyzes the seven provided conditions.
+                    </p>
+                </div>
+
+
+                <!-- Connector -->
+                <div class="step-connector">
+                    <span></span>
+                </div>
+
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">03</div>
+
+                    <div class="step-icon">
+                        <!-- Leaf icon -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M20.5 3.5C12 3.5 5 7 5 13.5
+                                 C5 17.5 8 20.5 12 20.5
+                                 C18.5 20.5 20.5 12 20.5 3.5Z"></path>
+
+                            <path d="M4 20c3-4 6-7 11-10"></path>
+                        </svg>
+                    </div>
+
+                    <h3>Get Your Recommendation</h3>
+
+                    <p>
+                        Receive a crop recommendation based on the conditions
+                        you provided.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="how-it-works-footer">
+                <a href="pages/recommend.html" class="section-button">
+                    Try Crop Recommender
+                    <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- =================================
+     ABOUT SECTION
+================================== -->
+
+    <section class="about-page" id="about">
+
+        <div class="about-grid"></div>
+
+        <div class="about-glow about-glow-one"></div>
+        <div class="about-glow about-glow-two"></div>
+
+
+        <!-- About Hero -->
+
+        <div class="about-hero">
+
+            <span class="about-label">
+                ABOUT CROP RECOMMENDER
+            </span>
+
+            <h1>
+                Technology that helps
+                <span>farmers decide.</span>
+            </h1>
+
+            <p>
+                Crop Recommender is a machine learning project designed
+                to explore how data-driven technology can assist with
+                crop selection based on soil and environmental conditions.
+            </p>
+
+        </div>
+
+
+        <!-- Story -->
+
+        <div class="about-story">
+
+            <div class="story-content">
+
+                <span class="about-small-label">
+                    THE IDEA
+                </span>
+
+                <h2>
+                    Built around a
+                    <span>real problem.</span>
+                </h2>
+
+                <p>
+                    Choosing what to grow can depend on many factors.
+                    Soil nutrients, temperature, humidity, pH, and rainfall
+                    can all influence which crops are suitable for a field.
+                </p>
+
+                <p>
+                    Crop Recommender was created as a practical machine
+                    learning project to turn these conditions into a simple,
+                    understandable recommendation.
+                </p>
+
+            </div>
+
+
+            <div class="story-visual">
+
+                <div class="field-card">
+
+                    <div class="field-card-top">
+                        <span>FIELD DATA</span>
+
+                        <span class="live-indicator">
+                            ● ANALYZED
+                        </span>
+                    </div>
+
+
+                    <div class="field-values">
+
+                        <div>
+                            <strong>07</strong>
+                            <span>Conditions</span>
+                        </div>
+
+                        <div>
+                            <strong>22</strong>
+                            <span>Crop classes</span>
+                        </div>
+
+                        <div>
+                            <strong>ML</strong>
+                            <span>Prediction</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Technology -->
+
+        <div class="technology-section">
+
+            <div class="technology-heading">
+
+                <span class="about-small-label">
+                    UNDER THE HOOD
+                </span>
+
+                <h2>
+                    Simple interface.
+                    <span>Real ML pipeline.</span>
+                </h2>
+
+                <p>
+                    The project connects a machine learning model with
+                    a lightweight web interface and API.
+                </p>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+                <div class="technology-card">
+
+                    <span class="tech-number">01</span>
+
+                    <div class="tech-icon">
+                        ML
+                    </div>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                    <p>
+                        A Random Forest model trained to classify crop
+                        recommendations from seven input features.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <span class="tech-number">02</span>
+
+                    <div class="tech-icon">
+                        API
+                    </div>
+
+                    <h3>
+                        FastAPI Backend
+                    </h3>
+
+                    <p>
+                        A lightweight API receives field conditions,
+                        validates the data, and sends it to the model.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <span class="tech-number">03</span>
+
+                    <div class="tech-icon">
+                        WEB
+                    </div>
+
+                    <h3>
+                        Web Interface
+                    </h3>
+
+                    <p>
+                        A simple frontend allows users to enter conditions
+                        and receive the model's recommendation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Features -->
+
+        <div class="features-section">
+
+            <div class="features-heading">
+
+                <span class="about-small-label">
+                    WHAT THE MODEL USES
+                </span>
+
+                <h2>
+                    Seven signals from the
+                    <span>field.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span>N</span>
+
+                    <div>
+                        <strong>Nitrogen</strong>
+                        <small>Soil nutrient level</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>P</span>
+
+                    <div>
+                        <strong>Phosphorus</strong>
+                        <small>Soil nutrient level</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>K</span>
+
+                    <div>
+                        <strong>Potassium</strong>
+                        <small>Soil nutrient level</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>°C</span>
+
+                    <div>
+                        <strong>Temperature</strong>
+                        <small>Environmental condition</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>%</span>
+
+                    <div>
+                        <strong>Humidity</strong>
+                        <small>Environmental condition</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>pH</span>
+
+                    <div>
+                        <strong>Soil pH</strong>
+                        <small>Soil acidity / alkalinity</small>
+                    </div>
+                </div>
+
+
+                <div class="feature-item">
+                    <span>MM</span>
+
+                    <div>
+                        <strong>Rainfall</strong>
+                        <small>Environmental condition</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="about-cta">
+
+            <div>
+
+                <span class="about-small-label">
+                    READY TO TRY IT?
+                </span>
+
+                <h2>
+                    Let the model analyze
+                    <span>your field.</span>
+                </h2>
+
+            </div>
+
+
+            <a href="pages/recommend.html" class="about-cta-button">
+                Get Recommendation
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+
+                    <div class="footer-brand-title">
+                        <div class="footer-logo">
+                            🌱
+                        </div>
+
+                        <div>
+                            <h3>Crop Recommender</h3>
+                            <span>Smarter farming decisions</span>
+                        </div>
+                    </div>
+
+                    <p>
+                        An AI-powered crop recommendation system
+                        that helps farmers make smarter decisions
+                        using soil and environmental conditions.
+                    </p>
+
+                </div>
+
+
+                <!-- Explore -->
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#about">About</a>
+                    <a href="pages/recommend.html">Get Recommendation</a>
+
+                </div>
+
+
+                <!-- Connect -->
+                <div class="footer-column">
+
+                    <h4>Connect</h4>
+
+                    <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:YOUR_EMAIL@example.com">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Crop Recommender
+                </span>
+
+                <span>
+                    Built with Machine Learning
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
