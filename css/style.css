@@ -2708,3 +2708,606 @@ input {
         grid-column: auto;
     }
 }
+
+/*-----------------------------------------------------------------------------------
+=======================================================================================
+#######################################################################################*/
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact-section {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+    background: #0a120d;
+    border-top: 1px solid rgba(130, 180, 110, 0.08);
+}
+
+
+/* Background Grid */
+
+.contact-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(rgba(100, 160, 90, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(100, 160, 90, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+
+/* Glows */
+
+.contact-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.contact-glow-one {
+    width: 350px;
+    height: 350px;
+    top: 10%;
+    left: -180px;
+    background: rgba(63, 138, 77, 0.08);
+}
+
+.contact-glow-two {
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    bottom: 5%;
+    background: rgba(80, 150, 90, 0.07);
+}
+
+
+/* Main Container */
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =================================
+   CONTACT HEADING
+================================= */
+
+.contact-heading {
+    max-width: 470px;
+}
+
+.contact-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #79b66b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.contact-heading h2 {
+    margin: 0 0 22px;
+
+    color: #e5eee3;
+
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+
+.contact-heading h2 span {
+    display: block;
+    color: #79b66b;
+}
+
+
+.contact-heading>p {
+    margin: 0;
+
+    max-width: 430px;
+
+    color: #7d8c80;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   CONTACT INFO
+================================= */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    margin-top: 38px;
+}
+
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.contact-info-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(130, 180, 110, 0.16);
+    border-radius: 10px;
+
+    background: rgba(25, 45, 29, 0.5);
+
+    color: #8ec67c;
+    font-size: 17px;
+}
+
+
+.contact-info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.contact-info-item strong {
+    color: #d9e6d6;
+    font-size: 13px;
+}
+
+
+.contact-info-item span {
+    color: #667469;
+    font-size: 11px;
+}
+
+
+/* =================================
+   CONTACT CARD
+================================= */
+
+.contact-card {
+    position: relative;
+
+    padding: 38px;
+
+    background: rgba(14, 27, 18, 0.82);
+
+    border: 1px solid rgba(130, 180, 110, 0.14);
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(14px);
+}
+
+
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(110, 175, 90, 0.45),
+            transparent);
+}
+
+
+/* Card Header */
+
+.contact-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-card-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #64806a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.contact-card-header h3 {
+    margin: 0;
+
+    color: #dce8d9;
+    font-size: 22px;
+}
+
+
+.contact-card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(130, 180, 110, 0.15);
+    border-radius: 10px;
+
+    background: rgba(63, 138, 77, 0.1);
+
+    color: #82bd73;
+    font-size: 18px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.form-group label {
+    color: #a4b2a3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    border: 1px solid rgba(130, 180, 110, 0.13);
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(6, 15, 9, 0.65);
+
+    color: #dfe9dd;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #4f5f53;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(110, 175, 90, 0.5);
+
+    background: rgba(8, 19, 11, 0.85);
+
+    box-shadow:
+        0 0 0 3px rgba(80, 150, 80, 0.07),
+        0 0 20px rgba(80, 150, 80, 0.04);
+}
+
+
+.form-group textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+
+/* =================================
+   STATUS MESSAGE
+================================= */
+
+.contact-status {
+    min-height: 18px;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.contact-status.success {
+    color: #86c878;
+}
+
+
+.contact-status.error {
+    color: #d17d7d;
+}
+
+
+/* =================================
+   SUBMIT BUTTON
+================================= */
+
+.contact-submit {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    border: 1px solid rgba(145, 210, 125, 0.15);
+    border-radius: 8px;
+
+    background: #3f8148;
+
+    color: #eef7eb;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.contact-submit:hover {
+    background: #4b9254;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 25px rgba(60, 130, 70, 0.2);
+}
+
+
+.contact-submit:active {
+    transform: translateY(0);
+}
+
+
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+.contact-submit-arrow {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+
+.contact-submit:hover .contact-submit-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .contact-heading {
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 85px 0;
+    }
+
+    .contact-card {
+        padding: 25px;
+    }
+
+    .contact-heading h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-container {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .contact-card {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .contact-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+/*------------------------------------------------------------------------------------------
+============================================================================================
+###########################################################################################*/
+
+/* =================================
+   CUSTOM CURSOR
+================================= */
+
+@media (pointer: fine) {
+
+    body {
+        cursor: none;
+    }
+
+    a,
+    button,
+    input,
+    textarea {
+        cursor: none;
+    }
+
+
+    .custom-cursor {
+        position: fixed;
+
+        width: 9px;
+        height: 9px;
+
+        top: 0;
+        left: 0;
+
+        border-radius: 50%;
+
+        background: #a5dc92;
+
+        pointer-events: none;
+
+        z-index: 99999;
+
+        transform: translate(-50%, -50%);
+
+        box-shadow:
+            0 0 12px rgba(120, 200, 100, 0.7),
+            0 0 25px rgba(100, 180, 90, 0.25);
+
+        transition:
+            width 0.25s ease,
+            height 0.25s ease,
+            background 0.25s ease,
+            opacity 0.2s ease;
+    }
+
+
+    .custom-cursor-ring {
+        position: fixed;
+
+        width: 34px;
+        height: 34px;
+
+        top: 0;
+        left: 0;
+
+        border: 1px solid rgba(130, 200, 110, 0.45);
+
+        border-radius: 50%;
+
+        pointer-events: none;
+
+        z-index: 99998;
+
+        transform: translate(-50%, -50%);
+
+        transition:
+            width 0.3s ease,
+            height 0.3s ease,
+            border-color 0.3s ease,
+            background 0.3s ease;
+    }
+
+
+    /* Hovering interactive elements */
+
+    .custom-cursor.cursor-hover {
+        width: 5px;
+        height: 5px;
+
+        background: #e4f5df;
+    }
+
+
+    .custom-cursor-ring.cursor-hover {
+        width: 58px;
+        height: 58px;
+
+        border-color: rgba(130, 205, 110, 0.75);
+
+        background: rgba(80, 150, 75, 0.08);
+    }
+
+
+    /* Cursor disappears when leaving page */
+
+    .custom-cursor.cursor-hidden,
+    .custom-cursor-ring.cursor-hidden {
+        opacity: 0;
+    }
+
+}
