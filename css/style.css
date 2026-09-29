@@ -3203,6 +3203,41 @@ input {
 
 }
 
+/* ================================
+   SOCIAL LINKS
+================================ */
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #758279;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.social-link:hover .social-icon {
+    color: #91c97d;
+    transform: translateY(-1px);
+}
+
+.social-link:hover {
+    color: #91c97d;
+}
+
 /*------------------------------------------------------------------------------------------
 ============================================================================================
 ###########################################################################################*/
