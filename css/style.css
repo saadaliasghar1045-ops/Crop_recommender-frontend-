@@ -4016,3 +4016,84 @@ body,
         animation-duration: 0.01ms !important;
     }
 }
+
+/*========================================================================================
+------------------------------------------------------------------------------------------
+'''''''''''''''''''''''''''''''''''''''''Mobile nav button'''''''''''''''''''''''''''''''''''''*/
+@media (max-width: 768px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.mobile-menu-open {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px;
+        gap: 18px;
+
+        background: var(--header-bg);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+
+        backdrop-filter: blur(15px);
+    }
+}
+
+/* =================================
+   TABLET / MOBILE NAVIGATION
+================================= */
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .main-nav.mobile-menu-open {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px;
+        gap: 18px;
+
+        background: var(--header-bg);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+
+        backdrop-filter: blur(15px);
+    }
+}
+
+
+/* =================================
+   DESKTOP
+================================= */
+
+@media (min-width: 901px) {
+
+    .main-nav {
+        display: flex;
+    }
+
+    .menu-button {
+        display: none;
+    }
+}

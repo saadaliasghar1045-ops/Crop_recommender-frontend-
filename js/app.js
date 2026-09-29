@@ -158,81 +158,206 @@ if (themeToggle) {
     });
 
 }
+// =================================
+// MOBILE NAVIGATION
+// =================================
 
+const menuButton = document.querySelector(".menu-button");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuButton && mainNav) {
+
+    menuButton.addEventListener("click", function () {
+
+        mainNav.classList.toggle("mobile-menu-open");
+
+        const isOpen =
+            mainNav.classList.contains("mobile-menu-open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+}
 // =================================
 // CROP RECOMMENDATION
 // =================================
 
-const recommendationForm = document.getElementById("recommendation-form");
+const recommendationForm =
+    document.getElementById("recommendation-form");
+
+const recommendationResult =
+    document.getElementById("recommendation-result");
+
+const recommendedCrop =
+    document.getElementById("recommended-crop");
+
+const recommendationConfidence =
+    document.getElementById("recommendation-confidence");
+
 
 if (recommendationForm) {
 
-    recommendationForm.addEventListener("submit", async function (event) {
+    recommendationForm.addEventListener(
+        "submit",
+        async function (event) {
 
-        // Stop the browser from refreshing the page
-        event.preventDefault();
-
-        // Get the values from the form
-        const formData = {
-            N: Number(document.getElementById("nitrogen").value),
-            P: Number(document.getElementById("phosphorus").value),
-            K: Number(document.getElementById("potassium").value),
-            temperature: Number(document.getElementById("temperature").value),
-            humidity: Number(document.getElementById("humidity").value),
-            ph: Number(document.getElementById("ph").value),
-            rainfall: Number(document.getElementById("rainfall").value)
-        };
-
-        console.log("Sending data to API:", formData);
+            // Stop the browser from refreshing the page
+            event.preventDefault();
 
 
-        try {
+            // ---------------------------------
+            // Get the values from the form
+            // ---------------------------------
 
-            // Send data to FastAPI
-            const response = await fetch(
-                "https://crop-recommender.fastapicloud.dev/predict",
-                {
-                    method: "POST",
+            const formData = {
+                N: Number(
+                    document.getElementById("nitrogen").value
+                ),
 
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
+                P: Number(
+                    document.getElementById("phosphorus").value
+                ),
 
-                    body: JSON.stringify(formData)
-                }
+                K: Number(
+                    document.getElementById("potassium").value
+                ),
+
+                temperature: Number(
+                    document.getElementById("temperature").value
+                ),
+
+                humidity: Number(
+                    document.getElementById("humidity").value
+                ),
+
+                ph: Number(
+                    document.getElementById("ph").value
+                ),
+
+                rainfall: Number(
+                    document.getElementById("rainfall").value
+                )
+            };
+
+
+            console.log(
+                "Sending data to API:",
+                formData
             );
 
 
-            // Convert API response to JavaScript object
-            const data = await response.json();
+            try {
 
-            console.log("API response:", data);
+                // ---------------------------------
+                // Send data to FastAPI
+                // ---------------------------------
 
+                const response = await fetch(
+                    "https://crop-recommender-de0b45bd.fastapicloud.dev/predict",
+                    {
+                        method: "POST",
 
-            // Check if FastAPI returned an error
-            if (!response.ok) {
-                throw new Error(
-                    data.detail || "Prediction failed."
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify(formData)
+                    }
                 );
+
+
+                // ---------------------------------
+                // Convert API response to JS object
+                // ---------------------------------
+
+                const data = await response.json();
+
+                console.log(
+                    "API response:",
+                    data
+                );
+
+
+                // ---------------------------------
+                // Check for API errors
+                // ---------------------------------
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        data.detail ||
+                        "Prediction failed."
+                    );
+
+                }
+
+
+                // ---------------------------------
+                // Display recommended crop
+                // ---------------------------------
+
+                recommendedCrop.textContent =
+                    data.recommended_crop;
+
+
+                // ---------------------------------
+                // Display confidence
+                // ---------------------------------
+
+                recommendationConfidence.textContent =
+                    `${(data.Confidence * 100).toFixed(0)}%`;
+
+
+                // ---------------------------------
+                // Show recommendation result
+                // ---------------------------------
+                recommendationResult.classList.add("show");
+
+                // Gentle scroll to reveal the result
+                window.scrollTo({
+                    top: window.scrollY + 130,
+                    behavior: "smooth"
+                });
+
+                recommendationResult.focus({
+                    preventScroll: true
+                });
+                // ---------------------------------
+                // Log prediction
+                // ---------------------------------
+
+                console.log(
+                    "Recommended crop:",
+                    data.recommended_crop
+                );
+
+                console.log(
+                    "Confidence:",
+                    data.Confidence
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Recommendation error:",
+                    error
+                );
+
             }
 
-
-            // Get the recommended crop
-            console.log(
-                "Recommended crop:",
-                data.recommended_crop
-            );
-
-
-        } catch (error) {
-
-            console.error(
-                "Recommendation error:",
-                error
-            );
-
         }
-
-    });
+    );
 
 }

@@ -362,18 +362,18 @@
 
             </div>
 
-
-            <!-- Result -->
-
-            <div class="recommendation-result" id="recommendation-result">
+            <div class="recommendation-result" id="recommendation-result" tabindex="-1">
 
                 <span class="result-label">
                     MODEL RECOMMENDATION
                 </span>
 
-                <h2 id="recommended-crop">
-                    —
-                </h2>
+                <h2 id="recommended-crop">—</h2>
+
+                <div class="confidence-result">
+                    <span>Confidence</span>
+                    <strong id="recommendation-confidence">—</strong>
+                </div>
 
                 <p>
                     Your field conditions have been analyzed.
@@ -382,12 +382,15 @@
             </div>
 
         </div>
+        <!-- End recommender-container -->
 
     </main>
+    <!-- End recommender-page -->
+
 
     <!-- =====================================================
-     FOOTER
-===================================================== -->
+         FOOTER
+    ===================================================== -->
 
     <footer class="site-footer">
 
@@ -399,6 +402,7 @@
                 <div class="footer-brand">
 
                     <div class="footer-brand-title">
+
                         <div class="footer-logo">
                             🌱
                         </div>
@@ -407,6 +411,7 @@
                             <h3>Crop Recommender</h3>
                             <span>Smarter farming decisions</span>
                         </div>
+
                     </div>
 
                     <p>
@@ -423,11 +428,25 @@
 
                     <h4>Explore</h4>
 
-                    <a href="../index.html">Home</a>
-                    <a href="../index.html#how-it-works">How It Works</a>
-                    <a href="../index.html#about">About</a>
-                    <a href="recommend.html">Get Recommendation</a>
-                    <a href="../index.html#contact">Contact</a>
+                    <a href="../index.html">
+                        Home
+                    </a>
+
+                    <a href="../index.html#how-it-works">
+                        How It Works
+                    </a>
+
+                    <a href="../index.html#about">
+                        About
+                    </a>
+
+                    <a href="recommend.html">
+                        Get Recommendation
+                    </a>
+
+                    <a href="../index.html#contact">
+                        Contact
+                    </a>
 
                 </div>
 
@@ -441,10 +460,12 @@
                         class="social-link">
 
                         <span class="social-icon github-icon">
+
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path
-                                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.18 9.18 0 0 1 12 6.95c.85 0 1.7.12 2.5.36 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
+                                    d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .08 1.53 1.06 1.53 1.06.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.24 10.24 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
                             </svg>
+
                         </span>
 
                         GitHub
@@ -456,10 +477,12 @@
                         class="social-link">
 
                         <span class="social-icon linkedin-icon">
+
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M5.2 3.5A2.5 2.5 0 1 1 5.2 8.5a2.5 2.5 0 0 1 0-5ZM3.1 9.7h4.2V21H3.1V9.7ZM10 9.7h4v1.55h.06c.56-1.06 1.93-2.18 3.98-2.18 4.25 0 5.03 2.8 5.03 6.44V21h-4.16v-4.87c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.27-1.87 2.57V21H10V9.7Z" />
                             </svg>
+
                         </span>
 
                         LinkedIn
@@ -468,12 +491,33 @@
 
                 </div>
 
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Crop Recommender
+                </span>
+
+                <span>
+                    Built with Machine Learning
+                </span>
+
+            </div>
+
+        </div>
+
     </footer>
 
 
     <!-- Custom Cursor -->
     <div class="floating-cursor"></div>
+
+    <!-- JavaScript -->
     <script src="../js/app.js"></script>
+
 </body>
 
 </html>
