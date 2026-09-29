@@ -3207,107 +3207,79 @@ input {
 ============================================================================================
 ###########################################################################################*/
 
+
 /* =================================
-   CUSTOM CURSOR
+   FLOATING CURSOR BALL
 ================================= */
 
-@media (pointer: fine) {
+.floating-cursor {
+    position: fixed;
 
-    body {
-        cursor: none;
-    }
+    width: 12px;
+    height: 12px;
 
-    a,
-    button,
-    input,
-    textarea {
-        cursor: none;
-    }
+    border-radius: 50%;
 
+    background: #91c97d;
 
-    .custom-cursor {
-        position: fixed;
+    pointer-events: none;
 
-        width: 9px;
-        height: 9px;
+    z-index: 99999;
 
-        top: 0;
-        left: 0;
+    transform: translate(-50%, -50%);
 
-        border-radius: 50%;
+    opacity: 0;
 
-        background: #a5dc92;
+    box-shadow:
+        0 0 12px rgba(110, 175, 90, 0.65),
+        0 0 25px rgba(110, 175, 90, 0.25);
 
-        pointer-events: none;
-
-        z-index: 99999;
-
-        transform: translate(-50%, -50%);
-
-        box-shadow:
-            0 0 12px rgba(120, 200, 100, 0.7),
-            0 0 25px rgba(100, 180, 90, 0.25);
-
-        transition:
-            width 0.25s ease,
-            height 0.25s ease,
-            background 0.25s ease,
-            opacity 0.2s ease;
-    }
+    transition:
+        width 0.3s ease,
+        height 0.3s ease,
+        background 0.3s ease,
+        opacity 0.25s ease,
+        box-shadow 0.3s ease;
+}
 
 
-    .custom-cursor-ring {
-        position: fixed;
+/* Ball becomes larger over interactive elements */
 
-        width: 34px;
-        height: 34px;
+.floating-cursor.is-hovering {
+    width: 38px;
+    height: 38px;
 
-        top: 0;
-        left: 0;
+    background: rgba(110, 175, 90, 0.16);
 
-        border: 1px solid rgba(130, 200, 110, 0.45);
+    border: 1px solid rgba(145, 210, 125, 0.5);
 
-        border-radius: 50%;
-
-        pointer-events: none;
-
-        z-index: 99998;
-
-        transform: translate(-50%, -50%);
-
-        transition:
-            width 0.3s ease,
-            height 0.3s ease,
-            border-color 0.3s ease,
-            background 0.3s ease;
-    }
+    box-shadow:
+        0 0 20px rgba(110, 175, 90, 0.25),
+        0 0 40px rgba(110, 175, 90, 0.1);
+}
 
 
-    /* Hovering interactive elements */
+/* Button hover */
 
-    .custom-cursor.cursor-hover {
-        width: 5px;
-        height: 5px;
+.floating-cursor.is-button {
+    width: 55px;
+    height: 55px;
 
-        background: #e4f5df;
-    }
+    background: rgba(63, 129, 72, 0.18);
 
+    border-color: rgba(145, 210, 125, 0.7);
 
-    .custom-cursor-ring.cursor-hover {
-        width: 58px;
-        height: 58px;
-
-        border-color: rgba(130, 205, 110, 0.75);
-
-        background: rgba(80, 150, 75, 0.08);
-    }
+    box-shadow:
+        0 0 25px rgba(75, 150, 80, 0.35);
+}
 
 
-    /* Cursor disappears when leaving page */
+/* Hide on touch devices */
 
-    .custom-cursor.cursor-hidden,
-    .custom-cursor-ring.cursor-hidden {
-        opacity: 0;
+@media (pointer: coarse) {
+
+    .floating-cursor {
+        display: none;
     }
 
 }
