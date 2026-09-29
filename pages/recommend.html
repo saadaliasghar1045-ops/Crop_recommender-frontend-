@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Crop Recommender</title>
+    <script>
+        const initialTheme =
+            localStorage.getItem("crop-recommender-theme");
+
+        if (initialTheme === "light") {
+            document.documentElement.setAttribute(
+                "data-theme",
+                "light"
+            );
+        }
+    </script>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -49,6 +59,10 @@
                 Get Recommendation
             </a>
 
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">☾</span>
+            </button>
 
             <!-- Mobile Menu Button -->
             <button class="menu-button" type="button" aria-label="Open navigation menu">

@@ -109,6 +109,57 @@ if (
 
 }
 // =================================
+// DARK / LIGHT THEME
+// =================================
+
+const themeToggle = document.querySelector(".theme-toggle");
+
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", function () {
+
+        const isLight =
+            document.documentElement.getAttribute("data-theme") === "light";
+
+        if (isLight) {
+
+            // Switch to dark
+            document.documentElement.removeAttribute("data-theme");
+
+            localStorage.setItem(
+                "crop-recommender-theme",
+                "dark"
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+        } else {
+
+            // Switch to light
+            document.documentElement.setAttribute(
+                "data-theme",
+                "light"
+            );
+
+            localStorage.setItem(
+                "crop-recommender-theme",
+                "light"
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+        }
+
+    });
+
+}
+
+// =================================
 // CROP RECOMMENDATION
 // =================================
 
