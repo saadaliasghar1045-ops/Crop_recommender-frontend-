@@ -16,7 +16,7 @@ This folder contains the frontend of the Crop Recommender web application.
 * Connects to the FastAPI backend
 * Displays recommended crops
 * Dark/Light mode
-* About and Contact sections
+* About section
 
 ## Backend
 
