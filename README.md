@@ -20,6 +20,7 @@ This folder contains the frontend of the PlanterAI web application.
 
 ## Backend
 
+PlanterAI is using the API I designed in crop recommender repository
 The frontend sends user input to the FastAPI `/predict` endpoint and displays the prediction returned by the backend.
 
 ## Run Locally
