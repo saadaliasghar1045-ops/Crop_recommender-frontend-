@@ -1,6 +1,6 @@
-# Crop Recommender — Frontend
+# PlanterAI — Frontend
 
-This folder contains the frontend of the Crop Recommender web application.
+This folder contains the frontend of the PlanterAI web application.
 
 ## Technologies
 
